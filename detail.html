@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+KR:wght@100;300&display=swap" rel="stylesheet">
+    <script src="script/script.js"></script>
+    <script src="script/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/detail.css">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main3">
+        <section id="sect1">
+            <div class="swiper-container mySwiper on">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide1-1.jpg " alt=""></div>
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide1-2.jpg " alt=""></div>
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide1-3.png " alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide2-1.png " alt=""></div>
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide2-2.png " alt=""></div>
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide2-3.jpg " alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide3-1.png " alt=""></div>
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide3-2.png " alt=""></div>
+                    <div class="swiper-slide"><img src="img/main2/sect1_slide3-3.png " alt=""></div>
+                </div>
+            </div>
+        </section>
+        <section id="sect2">
+            <ul class="btn">
+                <li><a href="#art1" class="on">놀멍</a></li>
+                <li><a href="#art2">쉬멍</a></li>
+                <li><a href="#art3">즐기멍</a></li>
+            </ul>
+            <article id="art1">
+                <div class="box_tit">
+                    <div class="box_left">
+                        <h1>우리만의<br>PLAY GROUND 놀멍</h1>
+                        <p>
+                            함께 만드는 우리만의 시간.<br>
+                            빨리 집으로 돌아갈 필요도<br class="none"> 자꾸 핸드폰을 들여다볼 필요도 없어요.<br>
+                            사랑하는 이들의 웃음 소리만 가득한 여행.<br><br>
+                            탁 트인 바닷가 앞, 내 방처럼 편안한 나만의 캠핑카에서<br>
+                            맘껏 웃고 떠들며 액티비티를 즐겨보세요.<br>
+                        </p>
+                    </div>
+                    <ul class="box_right">
+                        <li><span><img src="img/main2/sect2_icon1-1.png" alt=""></span><p>만화 같은 풍경 속 재미도 두배<br>
+                            만화책 세트</p></li>
+                        <li><span><img src="img/main2/sect2_icon1-2.png" alt=""></span><p>노는 재미에 먹는 재미까지<br>
+                            맥주를 부르는 스낵바</p></li>
+                        <li><span><img src="img/main2/sect2_icon1-3.png" alt=""></span><p>우리끼리 즐기는 액티비티<br>
+                            닌텐도 스위치, 보드게임</p></li>
+                        <li><span><img src="img/main2/sect2_icon1-4.png" alt=""></span><p>우리의 밤이 낮보다 길다면<br>
+                            비어퐁 세트</p></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            loopFillGroupWithBlank: true,
+            autoplay: {
+            },
+        });
+    </script>
+</body>
+</html>
