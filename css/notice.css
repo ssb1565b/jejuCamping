@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{font-family: 'Noto Sans KR', sans-serif;}
+/* sect1--------------------------------------------- */
+.title{width: 90%; margin: 0 auto; text-align: center; padding:40px; border-bottom: 2px solid #1ecad3;}
+.title h2{font-size: 2rem; color:#1ecad3;}
+
+.question{width: 90%; margin: 0 auto; padding:10px; border-bottom: 2px solid #1ecad3;}
+ul.page{display: none;}
+ul.page.on{display: block;}
+.page li{display: flex; width: 100%; padding:20px 0; border-bottom: 1px solid #eee;}
+.page li a{margin-left: auto;}
+.page .detail{display: none;}
+
+.tabMenu{width: 5%; margin: 0 auto; border: 1px solid #000;}
+.tabMenu li{display: inline-block;}
+.tabMenu li:nth-child(2), 
+.tabMenu li:nth-child(3){font-size: 2rem; background: #1ecad3; padding:20px; border-radius: 50%;}
+
+
+@media screen and (max-width:767px) {
+
+}
+@media screen and (min-width:768px) {
+
+}
+@media screen and (min-width:1288px) {
+
+}
