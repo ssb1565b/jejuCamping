@@ -1,2 +1,9 @@
 @charset "UTF-8";
 
+*{text-align: center;}
+header, footer{height: 10vh; border: 1px solid #000; background: rgb(182, 228, 255);}
+header li{display: inline-block;}
+
+#wrap{display: none;}
+#intro{height: 100vh; color:#fff; background: rgb(65, 65, 65);}
+#intro a{display: inline-block; color:#fff; border: 1px solid #fff; padding:10px;}
