@@ -9,6 +9,7 @@
 }
 
 #sect1 .mySwiper{
+    position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
@@ -36,7 +37,19 @@
 }
 
 #sect2{
+    height: 100%;
     position: relative;
+}
+
+#sect2 article{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#sect2 article.on{
+    z-index: 2;
+    display: block;
 }
 
 #sect2 ul.btn{
@@ -70,7 +83,7 @@
     border: 1px solid #1ECAD3;
 }
 
-#art1{
+article .box_tit{
     margin: 70px 22px;
 }
 
@@ -116,7 +129,239 @@
 .box_right li p{
     font-size: 20px;
     color: #999999;
-    width: 65%;
+    width: 68%;
+}
+
+.box_map{
+    width: 100%;
+    background: #F6F6F6;
+    margin: auto;
+}
+
+.map_tit{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.map_tit h1{
+    font-size: 40px;
+    text-align: center;
+    color: #1ECAD3;
+    padding: 69px;
+}
+
+.map_tit p{
+    padding: 7px 0 35px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.map_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map_btn li{
+    font-size: 20px;
+}
+
+.map_btn li:first-child{
+    margin-right: 35px;
+}
+
+.map_btn li.on{
+    font-weight: bold;
+    border-bottom: 3px solid #000;
+}
+
+.map_img{
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    height: 0;
+    padding-top: 67%;
+}
+
+.map_img li{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity: 0;
+    z-index: 1;
+}
+
+.map_img li.on{
+    opacity: 1;
+    z-index: 2;
+}
+
+.map_img li img{
+    width: 100%;
+}
+
+.desc_box{
+    position: relative;
+    width: 100%;
+    z-index: 20;
+}
+
+.map_desc{
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.map_desc.on{
+    z-index: 2;
+    opacity: 1;
+}
+
+.map_desc li{
+    position: relative;
+    height: 283px;
+    overflow: hidden;
+}
+
+.map_desc li figure img{
+    position: absolute;
+    width: 150%;
+    height: 200%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.map_desc li .desc{
+    width: 90%;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+     color: white;
+     text-align: center;
+}
+
+.map_desc li .desc h4{
+    font-size: 26px;
+}
+
+.map_desc li .desc h4 br{
+    display: none;
+}
+
+.map_desc li::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.map_desc li .desc p{
+    font-size: 18px;
+    padding: 14px;
+}
+
+.map_desc li .desc p br{
+    display: none;
+}
+
+.map_desc li .desc p span{
+    margin-right: 8px;
+}
+
+.map_desc li .desc p.main_p{
+    font-size: 20px;
+    padding: 0;
+}
+
+.map_desc li .desc p.main_p br{
+    display: block;
+}
+
+#sect3{
+    padding-top: 829px;
+}
+
+#sect3 .inner{
+    width: 100%;
+    height: 100%;
+    padding: 70px 22px;
+}
+
+#sect3 .inner h1{
+    font-size: 40px;
+    color: #1ECAD3;
+    text-align: center;
+}
+
+#sect3 .inner >p{
+    font-size: 20px;
+    text-align: center;
+    padding: 7px 0 0;
+}
+
+.car_img{
+    width: 100%;
+    max-width: 763px;
+    margin: 71px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car_img li img{
+    width: 100%;
+}
+
+.car_img li{
+    width: 439px;
+    height: 420px;
+}
+
+.car_img li::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/main2/sect4_img2.png);
+    background-repeat: no-repeat;
+    background-size: 459px 356px;
+    background-position: center;
+    position: absolute;
+    left: 51%;
+    top: 4px;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: .8s;
+}
+
+.car_img li:hover::after{
+    opacity: 1;
+}
+
+.tab_menu{
+    width: 100%;
+    height: 108px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab_menu li{
+    width: 50%;
+    border: 1px solid #000;
 }
 
 @media screen and (max-width:767px) {
@@ -127,7 +372,7 @@
         height: 100vh;
     }
 
-    #art1{
+    article .box_tit{
         margin: 100px 77px;
     }
 
@@ -152,10 +397,149 @@
         flex-wrap: wrap;
     }
 
+    .box_left p br.none{
+        display: none;
+    }
+
     .box_right li{
         width: 50%;
         flex-direction: column;
     }
+
+    .map_tit{
+        padding: 100px 77px 0;
+    }
+
+    .map_tit h1{
+        font-size: 50px;
+        text-align: left;
+        color: #1ECAD3;
+        padding: 0px;
+    }
+    
+    .map_tit p{
+        padding: 7px 0 60px;
+        text-align: left;
+        font-size: 26px;
+    }
+
+    .map_tit p br{
+        display: none;
+    }
+
+    .map_btn li{
+        font-size: 26px;
+    }
+    
+    .map_btn li:first-child{
+        margin-right: 52px;
+    }
+
+    .map_img{
+        padding-top: 81%;
+    }
+
+    .map_desc{
+        position: absolute;
+        left: 50%;
+        top: -110.5px;
+        transform: translate(-50%,0);
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 500px;
+        justify-content: space-between;
+    }
+
+    .map_desc li{
+        position:relative;
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .map_desc li figure img{
+        position: absolute;
+        width: 185px;
+        height: 185px;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    
+    .map_desc li .desc{
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        bottom: 200px;
+    }
+    
+    .map_desc li .desc h4{
+        font-size: 20px;
+    }
+
+    .map_desc li .desc h4 br{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+    }
+    
+    .map_desc li::after{
+        display: none;
+    }
+    
+    .map_desc li .desc p{
+        font-size: 14px;
+        padding: 14px 0;
+    }
+
+    .map_desc li .desc p br{
+        display: block;
+    }
+    
+    .map_desc li .desc p span{
+        margin-right: 8px;
+        display: block;
+    }
+    
+    .map_desc li .desc p.main_p{
+        font-size: 14px;
+        padding: 0;
+        color: #999999;
+    }
+
+    #sect3{
+        padding-top: 330px;
+    }
+
+    .car_img li{
+        width: 484px;
+        height: 463px;
+    }
+    
+    .car_img li::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: url(../img/main2/sect4_img2.png);
+        background-repeat: no-repeat;
+        background-size: 484px 375px;
+        background-position: center;
+        position: absolute;
+        left: 51%;
+        top: 4px;
+        transform: translate(-50%);
+        opacity: 0;
+        transition: .8s;
+    }
+
+
 }
 @media screen and (min-width:1288px) {
     #sect2 ul.btn{
@@ -163,12 +547,12 @@
         margin: auto;
         position: absolute;
         left: 50%;
-        top: -217px; 
+        top: -157px; 
         transform: translate(-50%);
-        z-index: 3;
+        z-index: 10;
     }
 
-    #art1{
+    article .inner{
         width: 1200px;
         margin: auto;
     } 
@@ -205,5 +589,71 @@
 
     .box_right li p{
         width: 276px;
+    }
+
+    .map_img{
+        padding-top: 900px;
+    }
+
+    .map_desc{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .map_desc li .desc{
+        margin: auto;
+        width: 90%;
+        position: absolute;
+        z-index: 2;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        bottom: 200px;
+    }
+    
+    .map_desc li .desc h4{
+        font-size: 26px;
+    }
+
+    .map_desc li .desc h4 br{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+    }
+    
+    .map_desc li::after{
+        display: none;
+    }
+    
+    .map_desc li .desc p{
+        font-size: 18px;
+    }
+
+    .map_desc li .desc p br{
+        display: none;
+    }
+    
+    .map_desc li .desc p span{
+        display: inline-block;
+    }
+
+    .car_img li{
+        width: 763px;
+        height: 730px;
+    }
+    
+    .car_img li::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: url(../img/main2/sect4_img2.png);
+        background-repeat: no-repeat;
+        background-size: 763px 591px;
+        background-position: center;
+        position: absolute;
+        left: 51%;
+        top: 4px;
+        transform: translate(-50%);
+        opacity: 0;
+        transition: .8s;
     }
 }
