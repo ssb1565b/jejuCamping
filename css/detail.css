@@ -361,12 +361,172 @@ article .box_tit{
 
 .tab_menu li{
     width: 50%;
-    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E7F9FA;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
+.tab_menu li.on{
+    background: #1ECAD3;
+    color: white;
+}
+
+.tab_desc{
+    height: 144px;
+    border: 1px solid #1ECAD3;
+    border-top: none;
+    position: relative;
+}
+
+.tab_desc li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    background: white;
+    font-size: 18px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.tab_desc li.on{
+    opacity: 1;
+    z-index: 2;
+}
+
+#sect4{
+    background: #1ECAD3;
+}
+
+#sect4 .inner{
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    padding: 70px 22px;
+    text-align: center;
+    color: white;
+}
+
+#sect4 .tit_box h1{
+    font-size: 40px;
+}
+
+#sect4 .tit_box p{
+    font-size: 20px;
+    padding: 8px 0 50px;
+}
+
+#sect4 .step_box p{
+    padding-bottom: 34px;
+}
+
+#sect4 .step_box p span{
+    display: block;
+    width: 98px;
+    margin: auto;
+    background: white;
+    color: #1ECAD3;
+    height: 37px;
+    padding-top: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-bottom: 19px;
+}
+
+#sect4 .step_box b{
+    display: block;
+    font-weight: normal;
+    
+}
+
+#sect4 .img_box{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0 50px;
+}
+
+#sect4 .img_box li{
+    width: 30%;
+    height: 100%;
+    background: white;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+#sect4 .img_box li img{
+    width: 95%;
+    height: 80%;
+    padding: 5px 0;
+}
+
+#sect4 .img_box li p{
+    position: absolute;
+    width: 100%;
+    font-size: 10px;
+    color: black;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#sect4 .desc_box p{
+    padding-bottom: 18px;
+    font-size: 14px;
+}
+
+#sect4 .desc_box p span{
+    display: block;
+    padding-bottom: 9px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#sect4 .look_btn{
+    margin-top: 32px;
+    width: 239px;
+    height: 52px;
+    background: white;
+    border: 1px solid #1ECAD3;
+    color: #1ECAD3;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.day_table{
+    display: none;
+}
+
+.outro_box{
+    display: none;
+}
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* 모바일---------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @media screen and (max-width:767px) {
 
 }
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* 타블렛---------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @media screen and (min-width:768px) {
     #sect1{
         height: 100vh;
@@ -516,6 +676,8 @@ article .box_tit{
 
     #sect3{
         padding-top: 330px;
+        max-width: 1200px;
+        margin: auto;
     }
 
     .car_img li{
@@ -539,8 +701,114 @@ article .box_tit{
         transition: .8s;
     }
 
+    .tab_menu{
+        height: 170px;
+    }
 
+    .tab_menu li{
+        font-size: 26px;
+    }
+
+    .tab_desc{
+        height: 230px;
+    }
+
+    .tab_desc li{
+        font-size: 22px;
+    }
+
+    #sect4 .inner{
+        padding: 100px;
+    }
+    
+    #sect4 .tit_box h1{
+        font-size: 50px;
+    }
+    
+    #sect4 .tit_box p{
+        font-size: 26px;
+    }
+
+    #sect4 .step_box p{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+    
+    #sect4 .step_box p span{
+        width: 114px;
+        margin: 0;
+        height: 43px;
+        font-size: 22px;
+        border-radius: 30px;
+    }
+
+    #sect4 .step_box  b{
+        width: 70%;
+        text-align: left;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    #sect4 .img_box{
+        display: flex;
+        justify-content: space-between;
+        margin: 70px 0 50px;
+    }
+    
+    #sect4 .img_box li{
+        width: 30%;
+        height: 100%;
+        background: white;
+        position: relative;
+        padding-bottom: 50px;
+    }
+    
+    #sect4 .img_box li img{
+        width: 95%;
+        height: 80%;
+        padding: 5px 0;
+    }
+    
+    #sect4 .img_box li p{
+        position: absolute;
+        width: 100%;
+        font-size: 14px;
+        color: black;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    #sect4 .desc_box p{
+        padding-bottom: 18px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #sect4 .desc_box p span{
+        display: block;
+        padding-bottom: 9px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #sect4 .desc_box p b{
+        width: 74%;
+        text-align: left;
+    }
 }
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* 피씨---------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
 @media screen and (min-width:1288px) {
     #sect2 ul.btn{
         width: 1200px;
@@ -655,5 +923,138 @@ article .box_tit{
         transform: translate(-50%);
         opacity: 0;
         transition: .8s;
+    }
+    .tab_menu{
+        height: 85px;
+    }
+
+    .tab_menu li{
+        width: 25%;
+        font-size: 26px;
+    }
+
+    .tab_desc li br.none{
+        display: none;
+    }
+    .tab_desc{
+        height: 188px;
+    }
+
+    #sect4 .inner{
+        padding: 146px 0;
+    }
+    
+    #sect4 .tit_box h1{
+        font-size: 50px;
+    }
+    
+    #sect4 .tit_box p{
+        font-size: 26px;
+    }
+
+    #sect4 .step_box{
+        display: flex;
+    }
+
+    #sect4 .step_box p{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 34px;
+    }
+    
+    #sect4 .step_box p span{
+        width: 114px;
+        margin: 0;
+        height: 43px;
+        font-size: 22px;
+        border-radius: 30px;
+        margin-bottom: 30px;
+    }
+
+    #sect4 .step_box  b{
+        width: 70%;
+        text-align: left;
+        font-size: 23px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    
+    #sect4 .img_box{
+        display: flex;
+        justify-content: space-between;
+        margin: 70px 0 148px;
+    }
+    
+    #sect4 .img_box li{
+        padding-bottom: 60px;
+    }
+    
+    #sect4 .img_box li p{
+        font-size: 20px;
+    }
+    
+    #sect4 .desc_box p span{
+        font-size: 22px;
+    }
+
+    #sect4 .desc_box p b{
+        width: 74%;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    #sect4 button{
+        display: none;
+        font-size: 22px;
+    }
+
+    .day_table{
+        display: table;
+        width: 100%;
+        border-collapse:collapse;
+        margin: 83px 0;
+    }
+
+    .day_table th{
+        background: white;
+        color: #1ECAD3;
+        height: 73px;
+        border: 1px solid #1ECAD3;
+    }
+
+    .day_table td{
+        height: 73px;
+        border: 1px solid #ffffff;
+    }
+
+    td.left_none{
+        border-left: none;
+    }
+
+    td.right_none{
+        border-right: none;
+    }
+
+    .outro_box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #sect4 .outro_box .img_box{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .outro_box ul{
+        width: 80%;
+        text-align: left;
     }
 }
