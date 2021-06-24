@@ -73,7 +73,7 @@ p.subtitle{font-size: 20px; line-height: 30px; text-align: center; margin-bottom
     p.subtitle{font-size: 26px; line-height: 36px; margin-bottom: 70px;}
     #sect3{margin-top: 100px;}
     .Wrapnone{width: 100%;}
-    
+    #sect4 .Wrap{padding-bottom: 100px;}
 }
 
 /* PC */
@@ -112,7 +112,6 @@ p.subtitle{font-size: 20px; line-height: 30px; text-align: center; margin-bottom
     /* ------------------------------------------------- sect3 */
     #sect3{margin-top:150px;}
     .mungtext{z-index: 9; font-size: 26px; line-height: 40px;}
-
     .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -121,24 +120,18 @@ p.subtitle{font-size: 20px; line-height: 30px; text-align: center; margin-bottom
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: auto;
-    }
-
+        margin: auto;}
     .swiper-slide img {
         display: block;
         object-fit: cover;
         width: 100%;
-        height: 100%;
-    }
-    
+        height: 100%;}
     .swiper-button-next,.swiper-button-prev{display: block;}
     .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
         right: 15px;
-        left: auto;
-    }
+        left: auto;}
     .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
         left: 15px;
-        right: auto;
-    }
-
+        right: auto;}
+    #sect4 .Wrap{padding-bottom: 150px;}
 }
