@@ -1,5 +1,7 @@
 @charset "UTF-8";
 *{font-family: 'Noto Sans KR', sans-serif;}
+
+
 /* sect1--------------------------------------------- */
 .title{width: 90%; margin: 0 auto; text-align: center; padding:40px; border-bottom: 2px solid #1ecad3;}
 .title h2{font-size: 2rem; color:#1ecad3;}
@@ -7,22 +9,96 @@
 .question{width: 90%; margin: 0 auto; padding:10px; border-bottom: 2px solid #1ecad3;}
 ul.page{display: none;}
 ul.page.on{display: block;}
-.page li{display: flex; width: 100%; padding:20px 0; border-bottom: 1px solid #eee;}
-.page li a{margin-left: auto;}
-.page .detail{display: none;}
+.page li{display: flex; flex-wrap: wrap; align-items: center; width: 100%; padding:20px 0;}
+.page li:not(:last-child){border-bottom: 1px solid #eee;}
 
-.tabMenu{width: 5%; margin: 0 auto; border: 1px solid #000;}
-.tabMenu li{display: inline-block;}
-.tabMenu li:nth-child(2), 
-.tabMenu li:nth-child(3){font-size: 2rem; background: #1ecad3; padding:20px; border-radius: 50%;}
+ul.page >li >span{font-size: 1.2rem; font-weight: 700;}
+.page li a{width: 23px; height: 14px; margin-left: auto;}
+.page li a img{width: 100%;}
+.page .detail{width: 100%; border-top: 1px solid #eee; padding:4% 0; margin-top:4%; display: none;}
+.page .detail p{width: 100%; font-size: 0.95rem;font-weight: 600; }
+.page .detail span.red{display: block; color:#FF8654; padding: 4% 0;}
+.page .detail span.gray{color:#999999;}
 
+.tabMenu{display: flex; justify-content: center; width: 90%; padding:6%; margin: 0 auto; }
+.tabMenu li{width: 20%;text-align: center;}
+.tabMenu li a{display: flex; align-items: center;}
+/* prev, next */
+.tabMenu li:nth-child(1) a span{ padding: 24% 10% 0 0;}
+.tabMenu li:nth-child(4){padding-left: 2%;}
+.tabMenu li:nth-child(4) a span{ padding: 24% 0 0 10%;}
+.tabMenu li:nth-child(1) a, .tabMenu li:nth-child(4) a{height: 100%;}
+.tabMenu li a p{font-size: 1rem;}
+.tabMenu li:nth-child(1) img, .tabMenu li:nth-child(4) img{display: inline-block; width: 14px; height: 8px;
+    transform: rotate(-90deg); opacity: 0.8;}
+.tabMenu li:nth-child(4) img{transform: rotate(90deg);}
+/* pagenation */
+.tabMenu li:nth-child(2) a, 
+.tabMenu li:nth-child(3) a{display: inline-block; width: 50px; height: 50px; 
+     font-size: 1.8rem; font-weight: 700; text-align: center; color:#ccc;}
+.tabMenu li a.on{color:#fff; background: #1ecad3; border-radius: 50%;}
+
+/* sect2 -----------------------------------------------------------------------------------------------------*/
+#sect2{background: #F6F6F6;}
+#sect2 .title{border: none;}
+.map{width: 90%; margin: 0 auto; border: 1px solid #fff;}
+.map img{width: 100%;}
+.map ul{width: 100%; color:#fff; font-size: 1.4rem; font-weight: 700; background: #1ECAD3; padding:6%;}
+.map ul li{display: flex; align-items: center; width: 90%; line-height: 1.6; margin: 0 auto;}
+.map ul li:nth-child(odd){ padding-top: 4%;}
+.map ul li:nth-child(even){ padding-bottom: 4%; border-bottom: 1px solid #fff;}
+.map ul li:last-child{border: none;}
+.map ul li span{width: 20px; height: 20px; margin-right: 2%;}
+.map span img{width: 100%; height: 100%;}
+
+.warning{padding:6%;}
+.warning ul li{display: flex; justify-content: center; align-items: center; padding-bottom: 8%;}
+.warning ul li p{width: 50%; font-size: 1.4rem; font-weight: 700; padding-left: 8%;}
+.warning ul li p span{display: block; font-size: 1rem; font-weight: 500; color:#999999; padding-top: 4%;}
 
 @media screen and (max-width:767px) {
 
 }
+
+/* 패드------------------------------------------------------------------------------------------------------------ */
 @media screen and (min-width:768px) {
 
+/* #sect1 */
+.title{padding:8%;}
+.title h2{font-size: 3rem;}
+.title p{display: flex; justify-content: center; flex-wrap: wrap; font-size: 1.4rem; font-weight: 700;}
+ul.page >li >span{position:relative; text-indent: 40px;}
+ul.page >li >span::before{content:''; position:absolute; left:0; display: inline-block; width: 14px; height: 29px; 
+    background: url(../img/main5/sect2_txt_q.png) no-repeat; background-size: cover;}
+.page .detail .inner{position:relative; padding-left: 6%;}
+.page .detail .inner::before{content:''; position:absolute; left:0; display: inline-block; width: 14px; height: 29px; 
+    background: url(../img/main5/sect2_txt_a.png) no-repeat; background-size: cover;}
+
+.tabMenu li{width: 13%;}
+.tabMenu li:nth-child(1) a span {padding: 22% 10% 0 0;}
+.tabMenu li:nth-child(4) a span {padding: 26% 0 0 10%;}
+
+/* #sect2 */
+.map{width: 80%;}
+.warning ul{display: flex;}
+.warning ul li{flex-wrap: wrap; text-align: center; }
+.warning ul li span img{display: inline-block; width: 70%; }
+.warning ul li p{width: 100%; padding-top: 8%; padding-left: 0;}
 }
+
+/* 데스크탑 ------------------------------------------------------------------------------------------------------------*/
 @media screen and (min-width:1288px) {
 
+/* #sect1 */
+.title {padding: 10%;}
+.title p{padding-top: 1%;}
+.tabMenu{width: 50%;}
+.tabMenu li:nth-child(1) a span {padding: 19% 10% 0 0;}
+.tabMenu li:nth-child(4) a span {padding: 22% 0 0 10%;}
+
+/* #sect2 */
+.map {display: flex; width: 60%;}
+.map a{order:2;}
+.map ul{width: 36%;}
+.warning ul {justify-content: center;}
 }

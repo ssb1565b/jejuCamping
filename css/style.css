@@ -5,5 +5,64 @@ header, footer{height: 10vh; border: 1px solid #000; background: rgb(182, 228, 2
 header li{display: inline-block;}
 
 #wrap{display: none;}
-#intro{height: 100vh; color:#fff; background: rgb(65, 65, 65);}
-#intro a{display: inline-block; color:#fff; border: 1px solid #fff; padding:10px;}
+#intro{position:relative; height: 100vh; color:#fff; min-width: 1920px;
+    background: linear-gradient(#202237, 45%, #202237, 45%, #313348);}
+#intro a{position: absolute; left:50%; bottom:20%; transform: translateX(-50%); 
+    display: inline-block; color:#fff; border: 1px solid #fff; padding:10px; display: none;}
+
+/* intro Ani---------------------------------------------------------------------------------------------*/
+#intro span{position:absolute;}
+.car{left:-40%; top:8%; width: 600px; height: 600px; animation: car ease-out 3s both;}
+.car img{width: 100%;}
+@keyframes car{
+    0%{left:-20%; top:8%}
+    10%{ top:8.5%}
+    20%{ top:8%}
+    30%{ top:9%}
+    40%{ top:8.5%}
+    40%{ top:8%}
+    70%{ top:8.5%}
+    80%{ top:8%}
+    100%{left:34.5%;transform: rotateY(0deg);}
+}
+
+.pictures >*{display: none;}
+.pictures img{width: 100%;}
+
+.girl, .boy{width: 220px;}
+.girl{left:44%; bottom:38%;}
+.guitar{left:47%; bottom:45%; transform: rotate(20deg);}
+.guitar img{width: 120px;}
+.bear{left:52%; bottom:36%;}
+.bear img{width: 100px;}
+.boy{right:32%; bottom:28%;}
+.boy img{transform: scaleX(-1);}
+.chair{right:27%; bottom:40%;}
+.record{right:30%; bottom:45%;}
+.record img{width: 60px;}
+.fire{left:37%; bottom:34%;}
+.fire img{width: 150px;}
+
+.radialLight{width: 180px; height: 180px; animation: radialLight linear infinite alternate 3s both;
+    background: radial-gradient(rgb(255, 214, 102) 3%, rgba(255, 228, 106, 0.5) 30%, rgba(255, 166, 0, 0) 50%);}
+.radial1{left:36.5%; bottom:34%;}
+.radial2{width: 100px; height: 100px; right:25.2%; bottom:32%;}
+
+@keyframes radialLight{
+    0%{opacity: .3;}
+    50%{opacity: .5;}
+    100%{opacity: .8;}
+}
+
+.sausage{left:41%; bottom:36%;}
+.sausage img{width: 80px; transform: scaleX(-1);}
+.smore{left:37%; bottom:36%;}
+.smore img{width: 80px;}
+.dog{left:42%; bottom:24%;}
+.dog img{width: 200px;}
+.bearBox{right:27%; bottom:36%;}
+.bearBox img{width: 80px;}
+.light{right:26%; bottom:34%;}
+.light img{width: 70px;}
+
+
