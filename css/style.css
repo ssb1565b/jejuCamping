@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
 *{text-align: center;}
-header, footer{height: 10vh; border: 1px solid #000; background: rgb(182, 228, 255);}
-header li{display: inline-block;}
-
-/* header, footer -------------------------------------------------------------------------------------- */
 /* header, footer{height: 10vh; border: 1px solid #000; background: rgb(182, 228, 255);}
 header li{display: inline-block;} */
+
+/* header, footer -------------------------------------------------------------------------------------- */
 header{ z-index: 9999; background: white;}
 p.mask{font-size: 16px; 
     white-space: nowrap;
@@ -37,7 +35,9 @@ header nav{display: flex; justify-content: space-between; align-items: center; f
     p.mask span{width: auto;}
     .logo{width: 200px;}
     .bar{display: none;}
-    .mainmenu{display: flex; justify-content: space-between;  height: 100%; left: 0; top: 0px; align-items: center; width: 350px;}
+    .mainmenu{display: flex; justify-content: space-between;  
+        /* height: 100%;  */
+        left: 0; top: 0px; align-items: center; width: 350px;}
     .mainmenu li a{display: block; color: #999; font-weight: 300;  font-size: 18px;}
     .mainmenu li:hover a{color: #1ecad3; font-weight: 600; font-size: 19px;}
     
