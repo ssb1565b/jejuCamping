@@ -22,6 +22,36 @@ $(function(){
        $('#content').load(href)
    })
 
+   // menu
+
+
+   var sw = 1
+   $('.bar').click(function () {
+       if (sw == 1) { 
+           $('ul.mainmenu').stop().slideDown()
+           $('.bar img').attr({'src': 'img/main1/close.png'})
+        
+           // alert(sw)
+       } else{ 
+           $('ul.mainmenu').stop().slideUp()
+           $('.bar img').attr({'src': 'img/main1/bar.png'})
+           
+       }
+   })
+
+   $(window).resize(function () {
+       var wid = $(this).width()
+       if (wid >= 1280) {
+           $('ul.mainmenu').css({'display': 'flex'})
+       } else {
+           $('ul.mainmenu').css({'display': 'none'})
+           $('.bar img').attr({'src': 'img/main1/bar.png'})
+           sw = !sw
+       }
+   });
+
+
+   
    //intro
    window.onload = function() { 
      setTimeout(function(){
