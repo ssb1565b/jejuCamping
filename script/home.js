@@ -22,7 +22,6 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 30,
-    slidesPerGroup: 4,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -31,4 +30,23 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        700: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
+        1000: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            slidesPerGroup: 4,
+        },
+    }
   });

@@ -4,15 +4,51 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .flexbox{display: flex; justify-content: center; align-items: center;}
 img{vertical-align: text-bottom;}
 .eng{font-family: 'Montserrat', sans-serif;}
+html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .swiper-container {
+            width: 90%;
+            height: 100%;
+        }
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        
+    }
+    .swiper-slide a{width: 100%;}
+    .swiper-slide a img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+    
 /* ------------------------------------------------- sect1 */
 .Wrap{width: 90%; margin: auto;}
-#sect1{height: 100vh;background: url(/jejuCamping/img/main1/sect1_img.png); background-position: center; background-attachment: fixed; background-size: cover;}
+#sect1{height:calc(100vh - 135px); background: url(/jejuCamping/img/main1/sect1_img.png); background-position: center; background-attachment: fixed; background-size: cover;}
 #sect1::after{content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 135px; left: 0;
+    width: 100%; height:calc(100vh - 135px);
     background: rgba(0, 0, 0, 0.5);}
-#sect1 img{position: absolute; left: 50%; top: 50%;transform: translate(-50%,-50%); z-index: 1; width: 80%;}
+#sect1 img{position: absolute; left: 50%; top: 60%;transform: translate(-50%,-60%); z-index: 1; width: 80%;}
 /* ------------------------------------------------- sect2 */
 #sect2{height: 150% }
 h1.maintitle{color: #1ecad3; white-space: nowrap; font-size: 40px; text-align: center; line-height: 50px; margin: 70px 0 15px 0;}
@@ -32,7 +68,7 @@ p.subtitle{font-size: 20px; line-height: 30px; text-align: center; margin-bottom
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;}
 .item div:hover ::before{display: block;}
-.item div p{display: none; position: absolute;  white-space: nowrap; font-size: 20px; bottom:20px; left: 20px; z-index: 2;  color: #fff;}
+.item div p{display: none; position: absolute; text-align: left;  white-space: nowrap; font-size: 20px; bottom:20px; left: 20px; z-index: 2;  color: #fff;}
 .item div:hover p{display: block;}
 /* ------------------------------------------------- sect3 */
 #sect3{margin-top: 70px;}
@@ -74,6 +110,10 @@ p.subtitle{font-size: 20px; line-height: 30px; text-align: center; margin-bottom
     #sect3{margin-top: 100px;}
     .Wrapnone{width: 100%;}
     #sect4 .Wrap{padding-bottom: 100px;}
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* PC */
