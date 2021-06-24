@@ -1,0 +1,177 @@
+/* 공통속성 */
+*{margin:0; padding:0; box-sizing: border-box;}
+body{font-family: 'Noto Sans KR', sans-serif;}
+.flexbox{display: flex; justify-content: center; align-items: center;}
+img{vertical-align: text-bottom;}
+.eng{font-family: 'Montserrat', sans-serif;}
+html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .swiper-container {
+            width: 90%;
+            height: 100%;
+        }
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        
+    }
+    .swiper-slide a{width: 100%;}
+    .swiper-slide a img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+    
+/* ------------------------------------------------- sect1 */
+.Wrap{width: 90%; margin: auto;}
+#sect1{height:calc(100vh - 135px); background: url(/jejuCamping/img/main1/sect1_img.png); background-position: center; background-attachment: fixed; background-size: cover;}
+#sect1::after{content: '';
+    position: absolute;
+    top: 135px; left: 0;
+    width: 100%; height:calc(100vh - 135px);
+    background: rgba(0, 0, 0, 0.5);}
+#sect1 img{position: absolute; left: 50%; top: 60%;transform: translate(-50%,-60%); z-index: 1; width: 80%;}
+/* ------------------------------------------------- sect2 */
+#sect2{height: 150% }
+h1.maintitle{color: #1ecad3; white-space: nowrap; font-size: 40px; text-align: center; line-height: 50px; margin: 70px 0 15px 0;}
+p.subtitle{font-size: 20px; line-height: 30px; text-align: center; margin-bottom: 50px;}
+.accodion{display: none;}
+.item{width: 100%;  display: grid; 
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-content: center;}
+.item div img{width: 100%;}
+.item > div{position: relative; z-index: 1;}
+.item div:hover span::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;}
+.item div:hover ::before{display: block;}
+.item div p{display: none; position: absolute; text-align: left;  white-space: nowrap; font-size: 20px; bottom:20px; left: 20px; z-index: 2;  color: #fff;}
+.item div:hover p{display: block;}
+/* ------------------------------------------------- sect3 */
+#sect3{margin-top: 70px;}
+#sect3 article{width: 100%; z-index: 1;  background-position: center; width: 100%; height: 35vh; color: #fff;}
+#sect3 article:nth-child(1){position: relative; background-image: url(/jejuCamping/img/main1/sect3_img1.png);}
+#sect3 article:nth-child(2){position: relative; background-image: url(/jejuCamping/img/main1/sect3_img2.png);}
+#sect3 article:nth-child(3){position: relative; background-image: url(/jejuCamping/img/main1/sect3_img3.png);}
+#sect3 article::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);}
+#sect3 .Wrap{display: flex; align-items: center; justify-content: flex-end; height: 100%;}
+#sect3 .Wrap2{justify-content: flex-start;}
+.mungtext{z-index: 9; font-size: 20px; line-height: 30px;}
+.mungtext p{margin-bottom: 20px;}
+/* ------------------------------------------------- sect4 */
+.Wrapnone{width: 100%;}
+#sect4 .Wrap{padding-bottom: 70px;}
+.swiper-button-next,.swiper-button-prev{display: none;}
+:root {--swiper-theme-color: #1ecad3;}
+
+/* Mobile */
+@media screen and (max-width:767px){
+    .tabletbr{display: none!important;}
+    .item div p{font-size: 15px;}
+    #sect3 .Wrap{justify-content: center; text-align: center;} 
+}
+
+/* Tablet */
+@media screen and (min-width:768px){
+    .Wrap{width: 80%;}
+    .mobilebr{display: none!important;}
+    #sect1 img{width: 500px;}
+    h1.maintitle{font-size: 50px; margin: 100px 0 15px 0;}
+    p.subtitle{font-size: 26px; line-height: 36px; margin-bottom: 70px;}
+    #sect3{margin-top: 100px;}
+    .Wrapnone{width: 100%;}
+    #sect4 .Wrap{padding-bottom: 100px;}
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* PC */
+@media screen and (min-width:1280px){
+    .Wrap{width: 1200px;}
+    .tabletbr{display: none!important;}
+    #sect1 img{width: 600px;}
+    h1.maintitle{margin: 150px 0 15px 0;}
+    /* ------------------------------------------------- sect2 */
+    #sect2{position: relative;}
+    .item{display: none;}
+    .accodion{width: 1200px;height: 500px;
+        display: flex; justify-content: space-between;}
+    .accodion div{    
+        position: relative;
+        height: 500px; width: 286px;
+        color: #fff; padding: 30px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-origin: center;
+        transform-origin: center center;
+        z-index: 1;}
+    .accodion div:nth-child(1){background-image: url(/jejuCamping/img/main1/sect2_img1.png);}
+    .accodion div:nth-child(2){background-image: url(/jejuCamping/img/main1/sect2_img2.png);}
+    .accodion div:nth-child(3){background-image: url(/jejuCamping/img/main1/sect2_img3.png);}
+    .accodion div:nth-child(4){background-image: url(/jejuCamping/img/main1/sect2_img4.png);}
+    .accodion div:hover p::before{
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;}
+    .accodion div p{display: none; font-size: 20px;  z-index: 1; margin-top: 380px; white-space: nowrap; }
+    .accodion div:hover p{display: block;}
+    /* ------------------------------------------------- sect3 */
+    #sect3{margin-top:150px;}
+    .mungtext{z-index: 9; font-size: 26px; line-height: 40px;}
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;}
+    .swiper-slide img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;}
+    .swiper-button-next,.swiper-button-prev{display: block;}
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        right: 15px;
+        left: auto;}
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+        left: 15px;
+        right: auto;}
+    #sect4 .Wrap{padding-bottom: 150px;}
+}
