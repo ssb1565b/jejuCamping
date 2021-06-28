@@ -500,6 +500,7 @@ article .box_tit{
     color: #1ECAD3;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .day_table{
@@ -529,7 +530,7 @@ article .box_tit{
 /* --------------------------------------------------------- */
 @media screen and (min-width:768px) {
     #sect1{
-        height: 100vh;
+        height: 80vh;
     }
 
     article .box_tit{
@@ -810,12 +811,16 @@ article .box_tit{
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 @media screen and (min-width:1288px) {
+    #sect1{
+        height: 100vh;
+    }
+
     #sect2 ul.btn{
         width: 1200px;
         margin: auto;
         position: absolute;
         left: 50%;
-        top: -157px; 
+        top: -177px; 
         transform: translate(-50%);
         z-index: 10;
     }
@@ -825,11 +830,8 @@ article .box_tit{
         margin: auto;
     } 
     
-    .box_tit{
-        margin: 160px 0;
-    }
-
-    .box_tit{
+    article .box_tit{
+        margin: 120px 0;
         display: flex;
     }
 
@@ -853,6 +855,7 @@ article .box_tit{
     .box_right li span{
         width: 69px;
         height: 69px;
+        margin: 0 10px 0 0;
     }
 
     .box_right li p{
