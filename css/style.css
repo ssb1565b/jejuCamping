@@ -71,7 +71,7 @@ footer ul{margin: 20px auto;}
 #wrap{display: none;}
 /* ---------------------------------------------------------------------------------------------------- */
 #intro {
-    position: relative;
+    position: fixed;
     min-width: 1920px;
     min-height: 1080px;    
     height: 100%;
@@ -79,108 +79,109 @@ footer ul{margin: 20px auto;}
     overflow: hidden;
     background: linear-gradient(#122f59, 66%, #203b69, 65%, #203b69);
 }
+
 .bg >img{ opacity: 0.3;}
 .fg{z-index: 999;}
 .tree_n1 {
     left: 185px;
-    bottom: -77px;
-    width: 370px;
+    bottom: 48px;
+    width: 320px;
 }
 .tree_n2 {
     left: -85px;
-    bottom: -67px;
+    bottom: 50px;
     width: 410px;
 }
 .tree_n3 {
     right: -83px;
-    bottom: -49px;
+    bottom: 61px;
     width: 405px;
 }
 .tree_n4 {
     right: 206px;
-    bottom: -54px;
-    width: 320px;
+    bottom: 76px;
+    width: 250px;
 }
 .tree_g1 {
     left: 439px;
-    bottom: 274px;
+    bottom: 347px;
     width: 90px;
 }
 .tree_g2 {
     right: 229px;
-    bottom: 275px;
+    bottom: 335px;
     width: 90px;
 }
 .hill1 {
     left: -17px;
-    bottom: 272px;
+    bottom: 342px;
     width: 800px;
 }
 .hill2 {
     right: 90px;
-    bottom: 272px;
+    bottom: 352px;
     width: 850px;
     transform: scaleX(-1);
 }
 .triangle1 {
     left: -60px;
-    bottom: 332px;
+    bottom: 432px;
     width: 210px;
 }
 .triangle2 {
     left: 100px;
-    bottom: 302px;
+    bottom: 382px;
     width: 170px;
 }
 .triangle3 {
     left: 204px;
-    bottom: 312px;
+    bottom: 402px;
     width: 190px;
 }
 .triangle4 {
     left: 477px;
-    bottom: 322px;
+    bottom: 392px;
     width: 100px;
 }
 .triangle5 {
     right: 479px;
-    bottom: 316px;
+    bottom: 406px;
     width: 130px;
 }
 .triangle6 {
     right: 379px;
-    bottom: 306px;
+    bottom: 396px;
     width: 124px;
 }
 .triangle7 {
     right: 232px;
-    bottom: 306px;
+    bottom: 426px;
     width: 170px;
 }
 .triangle8 {
     right: 125px;
-    bottom: 346px;
+    bottom: 456px;
     width: 190px;
 }
 .triangle9 {
     right: -88px;
-    bottom: 306px;
+    bottom: 356px;
     width: 300px;
 }
 .cloud1 {
     left: -71px;
-    top: 330px;
+    top: 280px;
     width: 241px;
 }
 .cloud2 {
     left: 121px;
-    top: 340px;
+    top: 310px;
     width: 180px;
     opacity: 0.8;
 }
 .cloud3 {
     left: 19px;
-    top: 310px;
+    top: 330px;
     width: 520px;
 }
 .cloud4 {
@@ -254,18 +255,18 @@ footer ul{margin: 20px auto;}
 }
 #intro .bg span, #intro .pictures span{position:absolute;}
 .car {
-    position:absolute;
+    position: absolute;
     left: 32%;
-    top: 27%;
+    top: 20%;
     animation: car ease-out 3s both;
 }
 .car img{width: 690px;}
 @keyframes car{
     0%{left:-20%;}
-    10%{ top:27.5%}
-    20%{ top:27%}
-    40%{ top:27.5%}
-    80%{ top:27%}
+    10%{ top:20.5%}
+    20%{ top:20%}
+    40%{ top:20.5%}
+    80%{ top:20%}
     100%{left:32%;transform: rotateY(0deg);}
 }
 
@@ -456,38 +457,41 @@ footer ul{margin: 20px auto;}
 
 .pictures >*{display: none;}
 
-.girl{left:42%; bottom:17%;}
+.girl {
+    left: 42%;
+    bottom: 23%;
+}
 .girl img{width: 220px;}
 .guitar {
-    left: 42.8%;
-    bottom: 23.4%;
-    transform: rotate(31deg);
+    left: 44.8%;
+    bottom: 28.4%;
+    transform: rotate(16deg);
 }
 .guitar img{width: 120px;}
 .bear {
     left: 51%;
-    bottom: 24%;
+    bottom: 29%;
 }
 .bear img{width: 100px;}
 .boy {
     right: 31%;
-    bottom: 4%;
-    transform: scaleX(-1);    
+    bottom: 11%;
+    transform: scaleX(-1);
 }
 .boy img{width: 330px; }
 .chair {
     right: 24%;
-    bottom: 18%;
+    bottom: 23%;
 }
 .chair img{width: 230px;}
 .record {
     right: 29%;
-    bottom: 26%;
+    bottom: 30%;
 }
 .record img{width: 90px;}
 .fire {
     left: 33%;
-    bottom: 14%;
+    bottom: 20%;
 }
 .fire img{width: 180px;}
 
@@ -495,7 +499,7 @@ footer ul{margin: 20px auto;}
     background: radial-gradient(rgb(255, 214, 102) 3%, rgba(255, 228, 106, 0.5) 30%, rgba(255, 166, 0, 0) 50%);}
 .radial1 {
     left: 33%;
-    bottom: 14%;
+    bottom: 20%;
 }
 
 @keyframes radialLight{
@@ -507,23 +511,23 @@ footer ul{margin: 20px auto;}
 
 .sausage {
     left: 38%;
-    bottom: 17%;
+    bottom: 21%;
 }
 .sausage img{width: 80px; transform: scaleX(-1);}
 .smore {
     left: 33%;
-    bottom: 16%;
+    bottom: 20%;
 }
 .smore img{width: 100px;}
 .dog {
     left: 38%;
-    bottom: 4%;
+    bottom: 11%;
     transform: scaleX(-1);
 }
 .dog img{width: 230px;}
 .bearBox {
     right: 23%;
-    bottom: 11%;
+    bottom: 14%;
 }
 .bearBox img{width: 150px;}
 
