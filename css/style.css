@@ -114,12 +114,12 @@ footer ul{margin: 20px auto;}
 }
 .hill1 {
     left: -17px;
-    bottom: 342px;
+    bottom: 344px;
     width: 800px;
 }
 .hill2 {
     right: 90px;
-    bottom: 352px;
+    bottom: 344px;
     width: 850px;
     transform: scaleX(-1);
 }
