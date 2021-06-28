@@ -151,7 +151,7 @@ display: block; object-fit: cover; border-radius: 30px;}
     .reviewBox{width: 90%; margin: 50px auto;}
     .reviewBox .box1{display: flex;}
     .reviewBox .box3{margin-top: 20px;}
-    .story4 img{margin-left: 25px; width: 150px;}
+    .story4 img{margin-left: 25px; width: 100px;}
     .storyInner{overflow: hidden;}
 
     .message{font-size: 16px;}
