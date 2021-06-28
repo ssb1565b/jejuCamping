@@ -6,8 +6,6 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 h1{font-weight: 700; text-align: center;}
 .sub{font-weight: 300; text-align: center; margin-top: 10px;}
 
-.recipe{background: #f6f6f6; width: 100%;}
-.recipe .button{display: flex;}
 .recipe .btn{width: 300px; height: 70px;
 background: #1ECAD3; border-radius: 20px;
 text-align: center; line-height: 70px;
@@ -18,12 +16,69 @@ margin-right: 20px; cursor: pointer;}
 
 .review h1{font-family: 'Montserrat', sans-serif;}
 .reviewBox .story{box-shadow: 0px 0px 6px 1px rgba(0,0,0,.1);
-border-radius: 25px; margin: 10px; padding: 25px;}
-.story3 img{margin-top: 25px; width: 100%;}
+border-radius: 25px; margin: 8px; padding: 25px;}
+.story3 img{margin-top: 49px; width: 100%;}
 .story4{display: flex;}
 .subtit{color: #999; font-size: 14px;}
 .review .tit{color: #1ECAD3; font-weight: 700;
 padding-bottom: 25px; font-size: 22px;}
+
+/* recipe---------------------------------------------------------- */
+.recipe{
+    width: 100%;
+    height: 115vh;
+    position: relative;
+    background: #f6f6f6;
+}
+
+.recipe .inner{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+ .enjoySwiper2{width: 100%; height: 100%;}
+ .enjoySwiper2 .swiper-slide{
+     display: flex; flex-wrap: wrap;
+     position: relative;
+}
+
+.enjoySwiper2 .swiper-slide .food{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.enjoySwiper2 .swiper-slide .food img{
+    width: 100%;
+    height: 100%;
+}
+
+.enjoySwiper2 .swiper-slide .tit{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+}
+
+.enjoySwiper2 .swiper-slide .tit h1,.enjoySwiper2 .swiper-slide .tit .sub,.enjoySwiper2 .swiper-slide .txt .exp{white-space: nowrap;}
+
+.enjoySwiper2 .swiper-slide .article{
+    position: absolute;
+    bottom: 40px;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 70px;}
 
 
 /* playlist---------------------------------------------------------- */
@@ -32,7 +87,7 @@ padding-bottom: 25px; font-size: 22px;}
 .playList h1{font-size: 40px;}
 .playList p{font-size: 20px;}
 
-.platlist_slide{width: 100%; height: 250px; margin: 50px 0;}
+.platlist_slide{width: 100%; height: 250px; margin: 50px 0 90px 0;}
 
 .platlist_slide .swiper-slide{text-align: center; font-size: 18px;
 background: #fff; display: flex; justify-content: center;
@@ -89,7 +144,6 @@ display: block; object-fit: cover; border-radius: 30px;}
     .recipe .hash{font-size: 20px;}
     .recipe .exp{font-size: 18px; padding: 20px 0 50px 0;}
     .food{text-align: center;}
-    .food img{width: 70%;}
 
     /* review */
     .review{margin-bottom: 70px;}
@@ -99,13 +153,7 @@ display: block; object-fit: cover; border-radius: 30px;}
     .story4 img{margin-left: 25px;}
 
     .message{font-size: 18px;}
-    
-    /* ----------------------------------------------------- */
-    /* swiper2 */
-    .enjoySwiper2{width: 100%; height: 130vh;}
-    .swiper-slide{display: flex; flex-wrap: wrap;}
-    .article{order: 2; width: 100%;}
-    .recipe .tit,.food{width: 100%;}
+
 }
 
 /* tablet */
@@ -116,14 +164,23 @@ display: block; object-fit: cover; border-radius: 30px;}
     .sub{font-size: 26px;}
 
     /* recipe */
-    .recipe .txt{text-align: center;}
-    .recipe .icon{display: none;}
-    .recipe .button{justify-content: center;}
+    .recipe{    overflow: hidden;}
+    .recipe .tit h1{text-align: left;}
+    .recipe .icon{display: block;}
+    .recipe .icon ul{display: flex; align-items: center;}
+    .recipe .icon ul li{background: #999; width: 120px; height: 120px;
+    border-radius: 50%; text-align: center; margin-right: 15px;}
+    .recipe .icon ul li p{color: #fff; font-size: 14px;}
+    .recipe .icon ul li:nth-child(1) img{width: 50%; margin-top: 10px;}
+    .recipe .icon ul li:nth-child(2) img,.recipe .icon ul li:nth-child(3) img
+    {width: 60%; margin: 30px 0 10px 0;}
+    .recipe .button{display: flex; justify-content: left; margin-top: 30px;}
+
+    .recipe .button{justify-content: center; display: flex;}
     .recipe h3{font-size: 36px;}
     .recipe .hash{font-size: 20px;}
     .recipe .exp{font-size: 22px; padding: 10px 0 70px 0;}
     .food{text-align: center;}
-    .food img{width: 70%;}
 
     /* review */
     .review{margin-bottom: 100px;}
@@ -134,13 +191,48 @@ display: block; object-fit: cover; border-radius: 30px;}
 
     .message{font-size: 20px;}
 
-    /* ----------------------------------------------------- */
-    /* swiper2 */
-    .enjoySwiper2{width: 100%; height: 170vh;}
-    .swiper-slide{display: flex; flex-wrap: wrap;}
-    .article{order: 2; width: 100%;}
-    .recipe .tit,.food{width: 100%;}
-    .food{height: 35%;}
+
+    /* recipe--------------------------------------------------------- */
+    .enjoySwiper2 .swiper-slide .food{
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        top: 50%;
+        left: 72%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .enjoySwiper2 .swiper-slide .food img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .enjoySwiper2 .swiper-slide .tit{
+        position: absolute;
+        left: 100px;
+        top: 0;
+        transform: translate(0);
+    }
+    
+    .enjoySwiper2 .swiper-slide .article{
+        position: absolute;
+        bottom: 40px;
+        top: 300px;
+        left: 100px;
+        transform: translate(0);
+    }
+
+    .recipe .inner .bgwhite{
+        width: 50%;
+        height: 101%;
+        background: white;
+        position: absolute;
+        right: -270px;
+        top: -1px;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 100px;}
+
 
     /* playlist---------------------------------------------------------- */
 
@@ -234,44 +326,42 @@ display: block; object-fit: cover; border-radius: 30px;}
     .sub{font-size: 26px;}
 
     /* recipe */
-    .food img{width: 92%; margin-top: 25px;}
-
-    .recipe{height: 111vh;}
-    .recipe h1{margin-top: 0;}
+    .recipe{height: 110vh;}
+    .recipe h1{margin-top: 150px;}
     .recipe h1,.recipe .sub,.recipe .txt,.food{text-align: left;}
 
     .recipe .txt h3{font-size: 30px; margin-top: 65px;}
     .recipe .txt .hash{font-size: 20px;}
     .recipe .txt .exp{font-size: 22px; margin: 20px 0 65px 0; padding: 0;}
 
-    .recipe .icon{display: block;}
-    .recipe .icon ul{display: flex; align-items: center;}
-    .recipe .icon ul li{background: #999; width: 120px; height: 120px;
-    border-radius: 50%; text-align: center; margin-right: 15px;}
-    .recipe .icon ul li p{color: #fff; font-size: 14px;}
-    .recipe .icon ul li:nth-child(1) img{width: 50%; margin-top: 10px;}
-    .recipe .icon ul li:nth-child(2) img,.recipe .icon ul li:nth-child(3) img
-    {width: 60%; margin: 30px 0 10px 0;}
-    .recipe .button{justify-content: left; margin-top: 30px;}
 
     /* review */
-    .review{width: 100%; margin-bottom: 150px;}
-    .reviewBox{display: flex; justify-content: space-between; width: 65%;}
+    .review{width: 100%; height: 100vh; max-width: 1200px; margin: auto;}
+    .reviewBox{display: flex; justify-content: space-between; width: 100%; height: 557px;}
     .reviewBox .box1{display: flex; flex-direction: column;}
     .reviewBox .box3{margin-top: 0px;}
-    .story3 img{margin: 34px 0 0 0;}
-    .story4{flex-direction: column; width: 100%;}
-    .story4 img{margin: 30px 0 0 0;}
-    
+    .story4{flex-direction: column; width: 100%; height: 100%;}
+    .story4 img{margin: 40px 0 0 0;}
+    .story3{width: 97%; height: 100%;}
+    .story1,.story2{width: 340px; height: 270px;}
+    .message{font-size: 20px;
+        width: 100%;
+        height: 146px;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        overflow: hidden;}
+    .box1 .message{height: 150px;}
 
-    /* ----------------------------------------------------- */
-    /* swiper2 */
-    .enjoySwiper2{height: 100vh; width: 63%;}
-    .swiper-slide{display: flex; flex-wrap: wrap;
-    flex-direction:column; margin-top: 150px;}
-    .recipe .tit{order: 0; width: 42%;}
-    .article{order: 1; width: 42%;}
-    .food{order: 2; text-align: right; width: 58%;}
+    /* recipe------------------------------------------------------------ */
+    .enjoySwiper2 .swiper-slide .tit,.enjoySwiper2 .swiper-slide .article{left: 0;}
+    .enjoySwiper2 .swiper-slide .article{top: 250px;}
+    .enjoySwiper2 .swiper-slide .food{width: 550px; height: 550px;}
+    .recipe .inner .bgwhite{
+        width: 56%; right: -348px;
+    }
+
+
+
 
     /* playlist---------------------------------------------------------- */
 
@@ -279,7 +369,7 @@ display: block; object-fit: cover; border-radius: 30px;}
         max-width: 1200px;
         margin: auto;
         width: 100%;
-        height: 1216px;
+        height: 1110px;
     }
 
     .playList h1{
@@ -298,7 +388,6 @@ display: block; object-fit: cover; border-radius: 30px;}
         width: 100%;
         height: 100%;
         margin-bottom: 100px;
-        border: 1px solid #000;
     }
 
     .platlist_slide .swiper-slide{
@@ -388,4 +477,3 @@ display: block; object-fit: cover; border-radius: 30px;}
     text-align: center; line-height: 20px; font-size: 12px;
     color: #000; opacity: 1; background: #fff;}
 .swiper-pagination-bullet-active{color: #fff; background: #1ECAD3;}
-/* .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: -10px;} */
