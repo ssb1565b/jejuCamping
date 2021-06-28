@@ -130,6 +130,7 @@ display: block; object-fit: cover; border-radius: 30px;}
 
 /* mobile */
 @media screen and (max-width:767px){
+    
     /* playlist */
     .playList h1,.recipe h1,.review h1{font-size: 40px; color: #1ECAD3;
     margin-top: 70px;}
@@ -162,7 +163,7 @@ display: block; object-fit: cover; border-radius: 30px;}
     .playList h1,.recipe h1,.review h1{font-size: 50px; color: #1ECAD3;
     margin-top: 100px;}
     .sub{font-size: 26px;}
-
+    .mobilebr{display: none!important;}
     /* recipe */
     .recipe{    overflow: hidden;}
     .recipe .tit h1{text-align: left;}

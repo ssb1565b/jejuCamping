@@ -43,7 +43,7 @@ html,
     
 /* ------------------------------------------------- sect1 */
 .Wrap{width: 90%; margin: auto;}
-#sect1{height:calc(100vh - 135px); background: url(../img/main1/sect1_img.png); background-position: center; background-attachment: fixed; background-size: cover;}
+#sect1{height:calc(100vh - 135px); background: url(../img/main1/sect1_img.png); background-position: center; background-size: cover;}
 #sect1::after{content: '';
     position: absolute;
     top: 135px; left: 0;
@@ -103,6 +103,7 @@ p.subtitle{font-size: 20px;  line-height: 30px; text-align: center; margin-botto
 
 /* Tablet */
 @media screen and (min-width:768px){
+    #sect1{ background-attachment: fixed; }
     .Wrap{width: 80%;}
     .mobilebr{display: none!important;}
     #sect1 img{width: 500px;}
@@ -134,6 +135,7 @@ p.subtitle{font-size: 20px;  line-height: 30px; text-align: center; margin-botto
         color: #fff; padding: 30px;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         background-origin: center;
         transform-origin: center center;
         z-index: 1;}

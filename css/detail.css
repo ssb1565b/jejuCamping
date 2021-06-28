@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
 }
+.eng{font-family: 'Montserrat', sans-serif; font-weight: 200;}
+.engb{font-family: 'Montserrat', sans-serif;  font-weight: 600;}
 
 #sect1{
     width: 100%;
@@ -104,7 +106,8 @@ article .box_tit{
 .box_right{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
+    margin: auto;
     padding: 0 17px;
 }
 
@@ -519,7 +522,7 @@ article .box_tit{
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 @media screen and (max-width:767px) {
-
+    .tabletbr{display: none!important;}
 }
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -529,6 +532,7 @@ article .box_tit{
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 @media screen and (min-width:768px) {
+    .mobilebr{display: none!important;}
     #sect1{
         height: 80vh;
     }
@@ -536,7 +540,12 @@ article .box_tit{
     article .box_tit{
         margin: 100px 77px;
     }
-
+    .box_right{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 17px;
+    }
     .box_left h1,
     .box_left p,
     .box_right li span,
@@ -811,6 +820,7 @@ article .box_tit{
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 @media screen and (min-width:1288px) {
+    .tabletbr{display: none!important;}
     #sect1{
         height: 100vh;
     }
