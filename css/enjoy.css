@@ -131,7 +131,7 @@ display: block; object-fit: cover; border-radius: 30px;}
 /* mobile */
 @media screen and (max-width:767px){
     /* playlist */
-    .playList h1,.recipe h1{font-size: 40px; color: #1ECAD3;
+    .playList h1,.recipe h1,.review h1{font-size: 40px; color: #1ECAD3;
     margin-top: 70px;}
     .sub{font-size: 20px;}
 
@@ -159,7 +159,7 @@ display: block; object-fit: cover; border-radius: 30px;}
 /* tablet */
 @media screen and (min-width:768px){
     /* playlist */
-    .playList h1,.recipe h1{font-size: 50px; color: #1ECAD3;
+    .playList h1,.recipe h1,.review h1{font-size: 50px; color: #1ECAD3;
     margin-top: 100px;}
     .sub{font-size: 26px;}
 
@@ -322,7 +322,7 @@ display: block; object-fit: cover; border-radius: 30px;}
 /* pc */
 @media screen and (min-width:1280px){
     /* playlist */
-    .playList h1,.recipe h1{font-size: 50px; color: #1ECAD3; margin-top: 150px;}
+    .playList h1,.recipe h1,.review h1{font-size: 50px; color: #1ECAD3; margin-top: 150px;}
     .sub{font-size: 26px;}
 
     /* recipe */
