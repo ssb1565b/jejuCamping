@@ -126,7 +126,7 @@ ul.page >li >span::before{content:''; position:absolute; left:0; display: inline
 .page .detail{margin-top:2%;}
 
 /* #sect2 */
-.map {display: flex; width: 60%;}
+.map {display: flex; width: 100%; max-width: 1200px; margin: auto;}
 .map .mapLink{order:2;}
 .map ul.textBox{order:1; width: 36%; display: block;    padding: 8% 2% 2% 2%;}
 .map .lv2 li:nth-child(even){border-bottom: 1px solid #fff; padding-bottom: 47px;}
