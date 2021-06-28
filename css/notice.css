@@ -46,7 +46,7 @@ ul.page >li >span{font-size: 1.2rem;}
 #sect2 .title{border: none;}
 .title p{display: flex; flex-wrap: wrap;justify-content: center;}
 .map{width: 90%; margin: 0 auto; border: 1px solid #fff;}
-.map .mapLink{position:relative;width: 100%; height: 0; padding-top: 70%; overflow: hidden;}
+.map .mapLink{position:relative;width: 100%; height: 0; padding-top: 83%; overflow: hidden;}
 .map iframe{position:absolute; left:0; top:0; width: 100%; height: 100%;}
 
 .map ul.textBox{width: 100%; color:#fff; font-size: 1.2rem; font-weight: 700; background: #1ECAD3; padding:1%;}
