@@ -76,6 +76,8 @@ footer ul{margin: 20px auto;}
     min-width: 1920px;
     min-height: 1080px;    
     height: 100%;
+    left:50%; top:50%;
+    transform: translate(-50%, -50%)
     color: #fff;
     overflow: hidden;
     background: linear-gradient(#122f59, 66%, #203b69, 65%, #203b69);
