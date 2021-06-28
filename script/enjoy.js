@@ -19,7 +19,7 @@ var ww = $(window).width();
           if (ww < 1263) {
             initSwiper();
             console.log(ww)
-          }else if(ww > 1264 && ww < 1300){
+          }else if(ww > 1264 && ww < 1400){
             document.location.reload(1000)
           }else{
 

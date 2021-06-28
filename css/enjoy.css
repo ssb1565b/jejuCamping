@@ -18,7 +18,7 @@ margin-right: 20px; cursor: pointer;}
 .reviewBox .story{box-shadow: 0px 0px 6px 1px rgba(0,0,0,.1);
 border-radius: 25px; margin: 8px; padding: 25px;}
 .story3 img{margin-top: 49px; width: 100%;}
-.story4{display: flex;}
+.story4{display: flex; height: 235px;}
 .subtit{color: #999; font-size: 14px;}
 .review .tit{color: #1ECAD3; font-weight: 700;
 padding-bottom: 25px; font-size: 22px;}
@@ -152,7 +152,7 @@ display: block; object-fit: cover; border-radius: 30px;}
     .reviewBox .box1{display: flex;}
     .reviewBox .box3{margin-top: 20px;}
     .story4 img{margin-left: 25px;}
-
+    .storyInner{overflow: hidden;}
     .message{font-size: 18px;}
 
 }
@@ -190,7 +190,8 @@ display: block; object-fit: cover; border-radius: 30px;}
     .reviewBox .box3{margin-top: 20px;}
     .story4 img{margin-left: 25px; width: 100%;}
 
-    .message{font-size: 20px;}
+    .message{font-size: 20px;     height: 111px;
+        overflow: hidden;}
 
 
     /* recipe--------------------------------------------------------- */
