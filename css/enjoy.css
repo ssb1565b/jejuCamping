@@ -26,7 +26,7 @@ padding-bottom: 25px; font-size: 22px;}
 /* recipe---------------------------------------------------------- */
 .recipe{
     width: 100%;
-    height: 115vh;
+    height: 160vh;
     position: relative;
     background: #f6f6f6;
 }
@@ -51,7 +51,7 @@ padding-bottom: 25px; font-size: 22px;}
     position: absolute;
     width: 300px;
     height: 300px;
-    top: 35%;
+    top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -73,7 +73,7 @@ padding-bottom: 25px; font-size: 22px;}
 .enjoySwiper2 .swiper-slide .article{
     position: absolute;
     bottom: 40px;
-    top: 54%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%);
 }
@@ -153,7 +153,22 @@ display: block; object-fit: cover; border-radius: 30px;}
     .reviewBox .box3{margin-top: 20px;}
     .story4 img{margin-left: 25px;}
     .storyInner{overflow: hidden;}
-    .message{font-size: 18px;}
+
+    .message{font-size: 16px;}
+    .review .subtit{font-size: 12px;}
+    .reivew .tit{font-size: 18px;}
+
+    .reviewBox p{
+        height: 50%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: normal;
+        line-height: 1.2; height: 4.8em;
+        display: -webkit-box; 
+        -webkit-line-clamp: 4; 
+        -webkit-box-orient: vertical;
+    }
 
 }
 
@@ -165,7 +180,7 @@ display: block; object-fit: cover; border-radius: 30px;}
     .sub{font-size: 26px;}
     .mobilebr{display: none!important;}
     /* recipe */
-    .recipe{    overflow: hidden;}
+    .recipe{min-width: 1100px; overflow: hidden;}
     .recipe .tit h1{text-align: left;}
     .recipe .icon{display: block;}
     .recipe .icon ul{display: flex; align-items: center;}
@@ -192,6 +207,21 @@ display: block; object-fit: cover; border-radius: 30px;}
 
     .message{font-size: 20px;     height: 111px;
         overflow: hidden;}
+
+
+
+    .reviewBox p{
+        height: 50%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: normal;
+        line-height: 1.2; height: 6em;
+        display: -webkit-box; 
+        -webkit-line-clamp: 5; 
+        -webkit-box-orient: vertical;
+    }
+        
 
 
     /* recipe--------------------------------------------------------- */
@@ -352,7 +382,21 @@ display: block; object-fit: cover; border-radius: 30px;}
         white-space: wrap;
         text-overflow: ellipsis;
         overflow: hidden;}
-    .box1 .message{height: 150px;}
+    .box1 .message{height: 145px;}
+
+    .reviewBox p{
+        height: 50%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: normal;
+        line-height: 1.2; height: 7.2em;
+        display: -webkit-box; 
+        -webkit-line-clamp: 6; 
+        -webkit-box-orient: vertical;
+    } 
+
+
 
     /* recipe------------------------------------------------------------ */
     .enjoySwiper2 .swiper-slide .tit,.enjoySwiper2 .swiper-slide .article{left: 0;}

@@ -18,6 +18,7 @@ header nav{display: flex; justify-content: space-between; align-items: center; f
 .logo{width: 170px;}
 .logo a img{width: 100%;}
 .mainmenu{text-align: center;width: 100%; align-items: center;}
+.bar{cursor: pointer;}
 
 footer{background: #555; color: #fff; text-align: center; margin: auto;}
 footer > h2{width: 170px; margin: auto;}
