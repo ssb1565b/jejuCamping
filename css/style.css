@@ -73,7 +73,8 @@ footer ul{margin: 20px auto;}
 #intro {
     position: relative;
     min-width: 1920px;
-    height: 100vh;
+    min-height: 1080px;    
+    height: 100%;
     color: #fff;
     overflow: hidden;
     background: linear-gradient(#122f59, 66%, #203b69, 65%, #203b69);
@@ -251,19 +252,20 @@ footer ul{margin: 20px auto;}
     bottom: 148px;
     width: 20px;
 }
-#intro span{position:absolute;}
+#intro .bg span, #intro .pictures span{position:absolute;}
 .car {
+    position:absolute;
     left: 32%;
-    top: 19%;
+    top: 27%;
     animation: car ease-out 3s both;
 }
 .car img{width: 690px;}
 @keyframes car{
     0%{left:-20%;}
-    10%{ top:19.5%}
-    20%{ top:19%}
-    40%{ top:19.5%}
-    80%{ top:19%}
+    10%{ top:27.5%}
+    20%{ top:27%}
+    40%{ top:27.5%}
+    80%{ top:27%}
     100%{left:32%;transform: rotateY(0deg);}
 }
 
