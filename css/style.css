@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 *{text-align: center;}
-/* header, footer{height: 10vh; border: 1px solid #000; background: rgb(182, 228, 255);}
-header li{display: inline-block;} */
 
+.flexbox{display: flex; justify-content: space-between; align-items: center;}
 /* header, footer -------------------------------------------------------------------------------------- */
-header{ z-index: 9999; background: white;}
+header{position: fixed; width: 100%; height: 135px; top: 0; left: 0;  z-index: 9999; background: white; box-shadow: 0px 1px 5px rgba(51, 51, 51, 0.1);}
+#content{padding-top: 135px;}
 p.mask{font-size: 16px; 
     white-space: nowrap;
     background: #FF8654; 
@@ -19,13 +19,28 @@ p.mask span img{width: 100%;}
 header nav{display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; height: 85px; width: 90%;margin: auto; }
 .logo{width: 170px;}
 .logo a img{width: 100%;}
-.mainmenu{display: none; text-align: center; position: absolute; width: 100%; }
+.mainmenu{text-align: center;width: 100%; align-items: center;}
 
+footer{background: #555; color: #fff; text-align: center; margin: auto;}
+footer > h2{width: 170px; margin: auto;}
+footer > h2 img{width: 100%;}
+footer a{display: block; color: #fff; }
+footer ul{margin: 20px auto;}
+.footext li{width: 20%;}
+.sns{width: 300px;}
+.sns li{width: 33%;}
+.footext p{white-space: nowrap;}
+.footext li:nth-child(-n+3){font-weight: 600;}
+.hide{display: none; font-size: 16px;}
+.copyright{font-size: 14px;}
 /* Mobile */
 @media screen and (max-width:767px){
-    .mainmenu{left: 0; top: 135px; z-index: 9999;}
-    .mainmenu li a{display: block; padding: 10px 0; background: #ffffffd0;  z-index: 999999;font-size: 16px;}
-    .mainmenu li:hover a{color: #1ecad3; font-weight: 600; font-size: 17px;}
+    .mainmenu{ position: absolute; left: 0; top: 135px; z-index: 9999;}
+    .mainmenu li a{display: block; padding: 10px 0; background: #ffffffec;  z-index: 999999;font-size: 16px;}
+    .mainmenu li:hover a,.mainmenu li a.on{color: #1ecad3; font-weight: 600; font-size: 17px;}
+    footer{padding:50px 0;}
+    .footext{width: 90%;}
+    
 }
 
 /* Tablet */
@@ -35,66 +50,453 @@ header nav{display: flex; justify-content: space-between; align-items: center; f
     p.mask span{width: auto;}
     .logo{width: 200px;}
     .bar{display: none;}
-    .mainmenu{display: flex; justify-content: space-between;  
-        /* height: 100%;  */
-        left: 0; top: 0px; align-items: center; width: 350px;}
+    .mainmenu{display: flex; justify-content: space-between;  width: 350px;}
     .mainmenu li a{display: block; color: #999; font-weight: 300;  font-size: 18px;}
-    .mainmenu li:hover a{color: #1ecad3; font-weight: 600; font-size: 19px;}
-    
+    .mainmenu li:hover a,.mainmenu li a.on{color: #1ecad3; font-weight: 600; font-size: 19px;}
+    footer{padding: 60px 0;}
+    .footext{width:70%;}
 }
 
 /* PC */
 @media screen and (min-width:1280px){
     header nav{ width: 1200px;}
     .mainmenu{width: 400px;}
+    .hide{display: block;}
+    footer{padding: 80px 0;}
+    .footext{width: 600px;}
+    
 }
 
 
 /* ---------------------------------------------------------------------------------------------------- */
 
 #wrap{display: none;}
-#intro{position:relative; height: 100vh; color:#fff; min-width: 1920px;
-    background: linear-gradient(#202237, 45%, #202237, 45%, #313348);}
-#intro a{position: absolute; left:50%; bottom:20%; transform: translateX(-50%); 
-    display: inline-block; color:#fff; border: 1px solid #fff; padding:10px; display: none;}
+/* ---------------------------------------------------------------------------------------------------- */
+#intro {
+    position: relative;
+    min-width: 1920px;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(#122f59, 66%, #203b69, 65%, #203b69);
+}
+.bg >img{ opacity: 0.3;}
+.fg{z-index: 999;}
+.tree_n1 {
+    left: 185px;
+    bottom: -77px;
+    width: 370px;
+}
+.tree_n2 {
+    left: -85px;
+    bottom: -67px;
+    width: 410px;
+}
+.tree_n3 {
+    right: -83px;
+    bottom: -49px;
+    width: 405px;
+}
+.tree_n4 {
+    right: 206px;
+    bottom: -54px;
+    width: 320px;
+}
+.tree_g1 {
+    left: 439px;
+    bottom: 274px;
+    width: 90px;
+}
+.tree_g2 {
+    right: 229px;
+    bottom: 275px;
+    width: 90px;
+}
+.hill1 {
+    left: -17px;
+    bottom: 272px;
+    width: 800px;
+}
+.hill2 {
+    right: 90px;
+    bottom: 272px;
+    width: 850px;
+    transform: scaleX(-1);
+}
+.triangle1 {
+    left: -60px;
+    bottom: 332px;
+    width: 210px;
+}
+.triangle2 {
+    left: 100px;
+    bottom: 302px;
+    width: 170px;
+}
+.triangle3 {
+    left: 204px;
+    bottom: 312px;
+    width: 190px;
+}
+.triangle4 {
+    left: 477px;
+    bottom: 322px;
+    width: 100px;
+}
+.triangle5 {
+    right: 479px;
+    bottom: 316px;
+    width: 130px;
+}
+.triangle6 {
+    right: 379px;
+    bottom: 306px;
+    width: 124px;
+}
+.triangle7 {
+    right: 232px;
+    bottom: 306px;
+    width: 170px;
+}
+.triangle8 {
+    right: 125px;
+    bottom: 346px;
+    width: 190px;
+}
+.triangle9 {
+    right: -88px;
+    bottom: 306px;
+    width: 300px;
+}
+.cloud1 {
+    left: -71px;
+    top: 330px;
+    width: 241px;
+}
+.cloud2 {
+    left: 121px;
+    top: 340px;
+    width: 180px;
+    opacity: 0.8;
+}
+.cloud3 {
+    left: 19px;
+    top: 310px;
+    width: 520px;
+}
+.cloud4 {
+    right: 332px;
+    top: 330px;
+    width: 400px;
+}
+.cloud5 {
+    right: 119px;
+    top: 350px;
+    width: 340px;
+    opacity: 0.8;
+}
+.cloud6 {
+    left: 579px;
+    top: 80px;
+    width: 110px;
+}
+.cloud7 {
+    right: 736px;
+    top: 213px;
+    width: 110px;
+}
+.cloud8 {
+    right: 419px;
+    top: 83px;
+    width: 110px;
+    opacity: 0.8;
+}
+.cloud9 {
+    right: 286px;
+    top: 113px;
+    width: 120px; 
+}
+.moveCloud1{animation: cloud01 3s both;}
+.moveCloud2{animation: cloud02 3s both;}
+.moveCloud3{animation: cloud03 3s both;}
+@keyframes cloud01{0%{transform: translateX(60px);}}
+@keyframes cloud02{0%{transform: translateX(-60px);}}
+@keyframes cloud03{0%{transform: translateY(60px);}100%{transform: translateY(0px);}}
 
-/* intro Ani---------------------------------------------------------------------------------------------*/
+.moon {
+    right: 356px;
+    top: 68px;
+    width: 100px;
+}
+.grass1 {
+    left: 496px;
+    bottom: 218px;
+    width: 20px;
+}
+.grass2 {
+    left: 586px;
+    bottom: 138px;
+    width: 20px;
+}
+.grass3 {
+    left: 736px;
+    bottom: 28px;
+    width: 20px;
+}
+.grass4 {
+    left: 986px;
+    bottom: 88px;
+    width: 20px;
+}
+.grass5 {
+    right: 586px;
+    bottom: 148px;
+    width: 20px;
+}
 #intro span{position:absolute;}
-.car{left:-40%; top:8%; width: 600px; height: 600px; animation: car ease-out 3s both;}
-.car img{width: 100%;}
+.car {
+    left: 32%;
+    top: 19%;
+    animation: car ease-out 3s both;
+}
+.car img{width: 690px;}
 @keyframes car{
-    0%{left:-20%; top:8%}
-    10%{ top:8.5%}
-    20%{ top:8%}
-    30%{ top:9%}
-    40%{ top:8.5%}
-    40%{ top:8%}
-    70%{ top:8.5%}
-    80%{ top:8%}
-    100%{left:34.5%;transform: rotateY(0deg);}
+    0%{left:-20%;}
+    10%{ top:19.5%}
+    20%{ top:19%}
+    40%{ top:19.5%}
+    80%{ top:19%}
+    100%{left:32%;transform: rotateY(0deg);}
 }
 
-.pictures >*{display: none;}
-.pictures img{width: 100%;}
+.stars {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+.stars0 {
+    left: 50px;
+    top: -102px;
+}
+.stars1{    
+    left: 390px;
+    top: 47px;
+}
+.stars .light {
+    left: 40px;
+    top: 76px;
+    width: 16px;
+}
+.stars1 .light, .stars2 .light, .stars3 .light2 {
+    display: none;
+}
 
-.girl, .boy{width: 220px;}
-.girl{left:44%; bottom:38%;}
-.guitar{left:47%; bottom:45%; transform: rotate(20deg);}
+
+.whiteDot{    
+    background: #fff;
+    border-radius: 50%;
+}
+.stars .dot1 {
+    left: 57px;
+    bottom: 29px;
+    width: 4px;
+    height: 4px;
+}
+.stars .dot2 {
+    left: 107px;
+    bottom: 49px;
+    width: 4px;
+    height: 4px;
+}
+.stars .dot3 {
+    right: 68px;
+    top: 21px;
+    width: 4px;
+    height: 4px;
+}
+.stars .dot4 {
+    right: 194px;
+    top: 55px;
+    width: 2px;
+    height: 2px;
+    opacity: 0.3;
+}
+.stars .dot5 {
+    right: 0px;
+    bottom: 49px;
+    width: 2px;
+    height: 2px;
+}
+.stars2 {
+    right: 467px;
+    top: 66px;
+}
+.greenDot{    
+    background: #4ab6b7;
+    border-radius: 50%;
+}
+.stars3 {
+    right: 1067px;
+    top: 80px;
+}
+.stars .light2 {
+    left: 53px;
+    top: 187px;
+    width: 12px;
+}
+.stars3 .dot1 {
+    left: 126px;
+    top: 22px;
+    width: 4px;
+    height: 4px;
+}
+.stars3 .dot2 {
+    left: 134px;
+    top: 50px;
+    width: 4px;
+    height: 4px;
+    opacity: 0.4;
+}
+.stars3 .dot3 {
+    right: 39px;
+    top: 55px;
+    width: 2px;
+    height: 2px;
+}
+.stars3 .dot4 {
+    right: 2px;
+    top: 143px;
+    width: 2px;
+    height: 2px;
+}
+.stars3 .dot5 {
+    left: 12px;
+    top: 123px;
+    width: 2px;
+    height: 2px;
+    opacity: 0.4;
+}
+.stars3 .dot6 {
+    left: 42px;
+    top: 29px;
+    width: 2px;
+    height: 2px;
+    opacity: 0.4;
+}
+.and1 {
+    right: 737px;
+    top: 140px;
+}
+.and2 {
+    right: 1757px;
+    top: 190px;
+}
+.and3 {
+    right: 577px;
+    top: 280px;
+}
+.stars4 {
+    right: 58px;
+    top: 80px;
+}
+.stars4 .light {
+    left: 190px;
+    top: 16px;
+    width: 8px;
+}
+.stars4 .light2 {
+    left: 204px;
+    top: 96px;
+    width: 10px;
+}
+.stars5 {
+    left: 136px;
+    top: 117px;
+}
+.stars5 .dot2 {
+    left: 18px;
+    bottom: 99px;
+    width: 7px;
+    height: 7px;
+}
+.stars5 .dot1 {
+    left: 7px;
+    bottom: 29px;
+    width: 7px;
+    height: 7px;
+}
+.stars6 {
+    left: 448px;
+    top: 170px;
+}
+.stars7 {
+    left: 828px;
+    top: -80px;
+}
+.stars7 .dot1 {
+    left: 57px;
+    bottom: 29px;
+    width: 7px;
+    height: 7px;
+}
+.stars7 .dot4 {
+    right: 100px;
+    top: 183px;
+    width: 5px;
+    height: 5px;
+    opacity: 1;
+}
+.stars8 {
+    right: 258px;
+    top: 180px;
+}
+
+
+
+
+.pictures >*{display: none;}
+
+.girl{left:42%; bottom:17%;}
+.girl img{width: 220px;}
+.guitar {
+    left: 42.8%;
+    bottom: 23.4%;
+    transform: rotate(31deg);
+}
 .guitar img{width: 120px;}
-.bear{left:52%; bottom:36%;}
+.bear {
+    left: 51%;
+    bottom: 24%;
+}
 .bear img{width: 100px;}
-.boy{right:32%; bottom:28%;}
-.boy img{transform: scaleX(-1);}
-.chair{right:27%; bottom:40%;}
-.record{right:30%; bottom:45%;}
-.record img{width: 60px;}
-.fire{left:37%; bottom:34%;}
-.fire img{width: 150px;}
+.boy {
+    right: 31%;
+    bottom: 4%;
+    transform: scaleX(-1);    
+}
+.boy img{width: 330px; }
+.chair {
+    right: 24%;
+    bottom: 18%;
+}
+.chair img{width: 230px;}
+.record {
+    right: 29%;
+    bottom: 26%;
+}
+.record img{width: 90px;}
+.fire {
+    left: 33%;
+    bottom: 14%;
+}
+.fire img{width: 180px;}
 
 .radialLight{width: 180px; height: 180px; animation: radialLight linear infinite alternate 3s both;
     background: radial-gradient(rgb(255, 214, 102) 3%, rgba(255, 228, 106, 0.5) 30%, rgba(255, 166, 0, 0) 50%);}
-.radial1{left:36.5%; bottom:34%;}
-.radial2{width: 100px; height: 100px; right:25.2%; bottom:32%;}
+.radial1 {
+    left: 33%;
+    bottom: 14%;
+}
 
 @keyframes radialLight{
     0%{opacity: .3;}
@@ -102,15 +504,28 @@ header nav{display: flex; justify-content: space-between; align-items: center; f
     100%{opacity: .8;}
 }
 
-.sausage{left:41%; bottom:36%;}
+
+.sausage {
+    left: 38%;
+    bottom: 17%;
+}
 .sausage img{width: 80px; transform: scaleX(-1);}
-.smore{left:37%; bottom:36%;}
-.smore img{width: 80px;}
-.dog{left:42%; bottom:24%;}
-.dog img{width: 200px;}
-.bearBox{right:27%; bottom:36%;}
-.bearBox img{width: 80px;}
-.light{right:26%; bottom:34%;}
-.light img{width: 70px;}
+.smore {
+    left: 33%;
+    bottom: 16%;
+}
+.smore img{width: 100px;}
+.dog {
+    left: 38%;
+    bottom: 4%;
+    transform: scaleX(-1);
+}
+.dog img{width: 230px;}
+.bearBox {
+    right: 23%;
+    bottom: 11%;
+}
+.bearBox img{width: 150px;}
+
 
 

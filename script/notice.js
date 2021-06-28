@@ -5,11 +5,11 @@ $(function(){
     e.preventDefault()
     
     //같은부모에 속한 디테일 슬라이드 토글
-    $(this).parent('li').find('.detail').slideToggle()
+    $(this).parent('li').find('.detail').stop().slideToggle()
 
-    //리스트 열면 애로우 회전
-    $(this).find('img').animate({rotate:'180deg'},'linear')  
-    //닫으면 애로우 원복    
+    //애로우 회전 토글
+    $(this).toggleClass('active')
+
     })
 
     //페이지 탭전환----------------------------------------------------------------------
