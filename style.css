@@ -8,19 +8,15 @@ dl, ol, ul {
     margin-bottom: 0;
 }
 
-/*  미리보기용 사진. 다하면 지울것. */
-.preview{ display: none;}
-
-#info {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    padding: 20px;
-    z-index: 999;
-  }
-  
+/* #info {
+position: fixed;
+top: 20px;
+left: 20px;
+background-color: rgba(0,0,0,0.5);
+color: #fff;
+padding: 20px;
+z-index: 9990;
+} */
 
 
 
@@ -28,7 +24,7 @@ dl, ol, ul {
 section:not(#sect1){z-index:2;}
 
 body{font-family: 'Noto Sans KR', sans-serif; 
-    background: #F6F6F6;
+    /* background: #F6F6F6 !important; */
     transition: all 0.4s ease;
 }
 
@@ -82,7 +78,7 @@ body{font-family: 'Noto Sans KR', sans-serif;
 .abstractGeo .bannerImgL{top:10%;}
 
 .cat-container{position:fixed; width: 100%; height: 97%; overflow: hidden; display: none;}
-img.cat{position:absolute; width: 36%; left:32%; bottom:0; display: none;}
+img.cat{position:absolute; width: 36%; left:32%; bottom:3%; display: none;}
 
 .image-parallax {position: absolute; width: 16%; left:41%; top:100%;}
 .image-parallax img {position: absolute; width: 100%}
@@ -92,10 +88,6 @@ img.cat{position:absolute; width: 36%; left:32%; bottom:0; display: none;}
 /***************************************************************************************************************/
 /* mobile ******************************************************************************************************/
 @media screen and (max-width:767px){
-.previewPC{display: none;}
-.previewM{display: block;}
-
-
 #sect1{height: 44vh; min-height: 412px; border-radius: 0 0 0 0;}
 .plus{font-size: 22px;}
 
@@ -144,10 +136,6 @@ img.cat{position:absolute; width: 36%; left:32%; bottom:0; display: none;}
 /****************************************************************************************************************/
 /* tablet *******************************************************************************************************/
 @media screen and (min-width:768px){
-.previewPC{display: block;}
-.previewM{display: none;}
-
-
 .header-m, .banner-m{display: none;}
 .header-pc, .banner-pc{display: block;}
 
@@ -170,7 +158,6 @@ header h1{width: 100%; display: flex; justify-content: center; align-items: cent
 
 
 /* banner-pc */
-.banner-pc{overflow: hidden;}
 .bannerTxt {position:absolute; left:28%; top:35%;}
 .bannerTxt {left: 14%; top: 47%;}
 .image-parallax{top:103%;}
@@ -183,17 +170,6 @@ header h1{width: 100%; display: flex; justify-content: center; align-items: cent
 }
 /* tablet end*******************************************************************************************************/
 /*******************************************************************************************************************/
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -230,16 +206,8 @@ header h1{width: 19%; min-width: 150px;margin-right: auto;}
 
 /****************************************************************************************************************/
 /* deskTop *******************************************************************************************************/
-
 @media screen and (min-width:1440px){
-#sect1{height: 97vh;}
-
-
-
-
-.cat-container{display: block; z-index:2;}
-img.cat{display: block;}
-
+#sect1{height: 94vh;}
 
 .abstractGeo img{width: 34%;}
 .image-parallax {position: absolute; top:100%;}
@@ -251,7 +219,7 @@ header h1{width: 20%;}
 .header-pc ul.utill{display: block;}
 .header-pc ul.utill li{display: inline-block; margin-right: 20px;}
 .abstractGeo .bannerImgR{bottom: -18%;}
-.eye-container {position: relative; width: 96%; height: 97%;}
+.eye-container {position: relative; width: 96%; height: 93%;}
 
 .bannerTxt{margin: 0;}
 .bannerTxt h2{font-size: 7rem;}
@@ -260,6 +228,16 @@ header h1{width: 20%;}
 /* deskTop end*******************************************************************************************************/
 /********************************************************************************************************************/
 
+/****************************************************************************************************************/
+/* deskTop *******************************************************************************************************/
+@media screen and (min-width:1920px){
+
+.cat-container{display: block; z-index:2;}
+img.cat{display: block;}
+}
+
+/* deskTop end*******************************************************************************************************/
+/********************************************************************************************************************/
 
 
 /****************************************************************************************************************/
