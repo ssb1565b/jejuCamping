@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+/* 부트스트랩 무효화.. php로 수정하면 지울것. */
+a{color:inherit; }
+a:hover{color:inherit;text-decoration: none;}
+button{background: none; border: none;}
+dl, ol, ul {
+    margin-bottom: 0;
+}
+
+/*  미리보기용 사진. 다하면 지울것. */
+.preview{ display: none;}
+
+#info {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 20px;
+    z-index: 999;
+  }
+  
+
+
+
+/* common --------------------------------------------------------------------------------------------*/
+section:not(#sect1){z-index:2;}
+
+body{font-family: 'Noto Sans KR', sans-serif; 
+    background: #F6F6F6;
+    transition: all 0.4s ease;
+}
+
+/* acce */
+.acce{position: absolute; z-index: 998;}
+.circleStr {left: 91.5%; top: 17.5%; width: 20px; height: 20px; border-radius: 50%; 
+    border: 2px solid #c2c2c2; animation: circleStr 2s ease alternate infinite;
+}
+@keyframes circleStr {
+    from {transform: scale(1);}
+    to {transform: scale(1.25);}
+}
+.plus { left: 4.8%; top: 76%; animation: plus 15s ease alternate infinite; 
+    transform-origin: 50%; font-size: 50px; color: #6b6868;
+}
+@keyframes plus{
+    from {transform: scale(1) rotate(0);}
+    to {transform: scale(1.5) rotate(720deg);}
+}
+.under-line{ left: 11%; top: 10%; fill: none; stroke: #F1A280; 
+    stroke-width: 6px; stroke-linecap: butt; /* stroke-linejoin: butt; */
+}
+.under-line svg{width:104px; height: 30px;}
+.under-line polyline {
+    stroke-dasharray: 215px;
+    animation: under-line 6s linear  infinite;
+}
+@keyframes under-line {
+    0% {stroke-dashoffset: 215px;}
+    50% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 0;}
+}
+
+/* sect1 ----------------------------------------------------------------------------------------------- */
+
+#sect1{position:relative; height: 97vh; 
+    /* min-height: 484px;  */
+    /* background: #fff;  */ 
+    overflow: hidden;
+}
+#sect1 .under-line {left: 91%; top: 54%; stroke: #D9D9D9;}
+#sect1 .under-line svg {width: 102px;}
+.bannerTxt h2{font-size: 6rem; font-weight: 800; font-family: 'Montserrat', sans-serif; letter-spacing: -0.5rem;}
+.bannerTxt p{font-size: 1rem; font-weight: 400; margin-left: 1%; margin-top: 0.5%; line-height: 1.8;}
+
+/* skrollr fixed */
+.fixed{position:fixed; width: 100%; height: 100%; top: 0; left: 0;}
+.fixedElem{position:relative;}
+
+.abstractGeo{width: 100%; height: 90%; background: #fff; overflow: hidden;}
+.abstractGeo .bannerImgL{top:10%;}
+
+.cat-container{position:fixed; width: 100%; height: 97%; overflow: hidden; display: none;}
+img.cat{position:absolute; width: 36%; left:32%; bottom:0; display: none;}
+
+.image-parallax {position: absolute; width: 16%; left:41%; top:100%;}
+.image-parallax img {position: absolute; width: 100%}
+
+
+  
+/***************************************************************************************************************/
+/* mobile ******************************************************************************************************/
+@media screen and (max-width:767px){
+.previewPC{display: none;}
+.previewM{display: block;}
+
+
+#sect1{height: 44vh; min-height: 412px; border-radius: 0 0 0 0;}
+.plus{font-size: 22px;}
+
+/* mobile nav */
+#nav_gnb { background:#000; width: 100%; height: 100vh; position: fixed !important; 
+    right: 0; top: 0; z-index: 999; transition: 0.5s; transform: translateX(100%);}
+#nav_gnb.on{ transform: translateX(0rem);   transition-timing-function: cubic-bezier(10,2,3,1);}
+#nav_gnb ul{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); 
+    width: 100%; padding: 50px; text-align: center;}
+
+#nav_gnb ul li a{position: relative; font-size: 40px; font-weight: 600; color: white; display: block; margin: 5% 0; }
+#nav_gnb ul li a::after{content: ''; position: absolute; left: 0%; bottom: -6%;
+    width: 0%; height: 4px; background:#eee;  transition: 0.3s linear; margin: auto;}
+#nav_gnb ul li:hover a::after{width: 100%;}
+
+.bar {position: fixed !important; right: 24px; top: 20px; cursor: pointer; z-index: 999;}
+.bar span{display: block; width: 30px;height: 4px; background:#000; margin: 4px 0; transition: .5s linear;}
+.bar.on span:nth-child(1){transform: rotate(-45deg) translate(-6px, 6px); background: white;}
+.bar.on span:nth-child(2){opacity: 0;}
+.bar.on span:nth-child(3){transform: rotate(45deg) translate(-5px, -5px); background: white;}
+
+/* banner-m */
+.header-m, .banner-m{display: block;}
+.header-pc, .banner-pc{display: none;}
+.banner-m .bannerImgL{top:0%;}
+.banner-m{max-height: 420px;}
+.banner-m >*{position:absolute;}
+.bannerTxtM{left: 13%; top:58%; transform: translateY(-50%); padding-top: 14%;}
+.banner-m h2 {width: 76%; font-size: 3.2rem;  font-weight: 800; font-family: 'Montserrat', sans-serif;  
+    padding-bottom: 3.4%; letter-spacing: -0.2rem;}
+.banner-m p {font-size: 0.5rem;}
+.abstractGeoM{width: 100%; height: 100%; left:0; top:15%;}
+.abstractGeoM >*{position:absolute;}
+.abstractGeoM img{width: 86%;}
+.bannerImgLM {left: -44%;top: -35%;}
+.bannerImgRM{right:-53%; bottom:-11%;}
+.catM { width: 56%; right: 0%; bottom:0;}
+
+}
+/* mobile end******************************************************************************************************/
+/******************************************************************************************************************/
+
+
+
+
+/****************************************************************************************************************/
+/* tablet *******************************************************************************************************/
+@media screen and (min-width:768px){
+.previewPC{display: block;}
+.previewM{display: none;}
+
+
+.header-m, .banner-m{display: none;}
+.header-pc, .banner-pc{display: block;}
+
+
+#sect1{height: 80vh;}
+
+/* header-pc*/
+.header-pc{position:fixed; width: 100%; height: 100px; background: #fff; border-bottom: 1px solid #E1E1E1; z-index:999;}
+.header-pc .inner{width: 77%; height: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding:1% 0; margin: 0 auto;}
+header h1{width: 100%; display: flex; justify-content: center; align-items: center; font-size: 1.4rem; font-weight: 600; letter-spacing: -0.1rem;}
+.header-pc h1 img{margin-right: 6px;}
+
+.header-pc nav {width: 100%; text-align: center;}
+.header-pc nav ul li{width: 25%; font-size: 1.2rem; font-weight: 600;}
+.header-pc nav ul li:last-child{margin-left: 4%;}
+.header-pc nav ul li:last-child a{display: inline-block; padding:6px 12px; border-radius: 4px; background: #F8DC00;}
+.header-pc nav ul{display: flex; align-items: center;}
+.header-pc ul.utill{width: 10%; display: none;}
+
+
+
+/* banner-pc */
+.banner-pc{overflow: hidden;}
+.bannerTxt {position:absolute; left:28%; top:35%;}
+.bannerTxt {left: 14%; top: 47%;}
+.image-parallax{top:103%;}
+.image-parallax img{width: 93%;}
+
+.abstractGeo .bannerImgL{left:-23%;}
+.bannerImgL img{width: 40%;}
+.abstractGeo .bannerImgR{bottom: -40%;}
+
+}
+/* tablet end*******************************************************************************************************/
+/*******************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************************/
+/* lapTop *******************************************************************************************************/
+@media screen and (min-width:1024px){
+.header-m, .banner-m{display: none;}
+.header-pc, .banner-pc{display: block;}
+
+#sect1{height: 78vh;}
+
+
+.header-pc .inner{padding:0;}
+header h1{width: 19%; min-width: 150px;margin-right: auto;}
+.header-pc nav {width: 60%; margin: 0 auto;}   
+.header-pc ul.utill{width: 13%; display: block; margin-left: auto;}
+.header-pc ul.utill li{display: inline-block; margin-right: 20px;}
+
+
+/* .abstractGeo {border-radius: 0 0 19% 0;} */
+.abstractGeo .bannerImgL{left:-9%;}
+.abstractGeo .bannerImgR{bottom: -17%;}
+.bannerTxt {left: 27%; top: 32%;}
+.bannerTxt h2{width: 116%;}
+.bannerTxt {margin: 11% 0 0 -2%;}
+}
+/* lapTop end*******************************************************************************************************/
+/********************************************************************************************************************/
+
+
+/****************************************************************************************************************/
+/* deskTop *******************************************************************************************************/
+
+@media screen and (min-width:1440px){
+#sect1{height: 97vh;}
+
+
+
+
+.cat-container{display: block; z-index:2;}
+img.cat{display: block;}
+
+
+.abstractGeo img{width: 34%;}
+.image-parallax {position: absolute; top:100%;}
+.image-parallax img {width: 100%;}
+
+
+header h1{width: 20%;}
+.header-pc nav {width: 50%;}   
+.header-pc ul.utill{display: block;}
+.header-pc ul.utill li{display: inline-block; margin-right: 20px;}
+.abstractGeo .bannerImgR{bottom: -18%;}
+.eye-container {position: relative; width: 96%; height: 97%;}
+
+.bannerTxt{margin: 0;}
+.bannerTxt h2{font-size: 7rem;}
+}
+
+/* deskTop end*******************************************************************************************************/
+/********************************************************************************************************************/
+
+
+
+/****************************************************************************************************************/
+/* BIG 4K deskTop *******************************************************************************************************/
+@media screen and (min-width:2560px){
+.header-pc h1{font-size: 1.6rem;}
+.header-pc nav ul li{font-size: 1.4rem;}
+.eye-container{width: 95%;}
+.bannerTxt h2{font-size: 10rem;}
+.bannerTxt p{font-size: 2rem;}
+
+}
+
+/* BIG 4K deskTop end*******************************************************************************************************/
+/********************************************************************************************************************/
